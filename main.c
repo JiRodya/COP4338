@@ -17,8 +17,11 @@ void divide();
 void multiply();
 void compare();
 
+/**
+ * @brief Simple CLI interface to perform simple mathematical operations
+*/
 int main() {
-    int input;
+    int option;// to use in the switch for menu
 
     printf("This is a calculator capable of performing the following operations:\n");
     printf("Addition, Subtraction, Division, Multiplication, Comparison.\n");
@@ -26,40 +29,40 @@ int main() {
     do {
         Menu();
 
-        //ONLY WILL BE 1 IF A SINGLE NUMBER WAS ENTERED
-        if (scanf("%d", &input) != 1) {
+        //ONLY WILL BE 1 IF A NUMBER WAS ENTERED
+        if (scanf("%d", &option) != 1) {
             printf("Invalid input. Please enter an option from the menu.\n");
             while (getchar() != '\n') {}  // Clear the input buffer
         }
 
-        //ONCE HERE ONLY NUMBERS WHERE ENTERED
+        //ONCE HERE ONLY NUMBERS WERE ENTERED
         else {
-            switch (input) {
+            switch (option) {
                 case Sum:
-                    printf("We are in Addition.\n");
+                    printf("ADDING NUMBERS.\n");
                     while (getchar() != '\n') {} 
                     add();
                     break;
 
                 case Rest:
-                    printf("We are in Subtraction.\n");
+                    printf("SUBTRACTING NUMBERS.\n");
                     while (getchar() != '\n') {} 
                     subtract();
                     break;
 
                 case Div:
-                    printf("We are in Division.\n");
+                    printf("DIVIDING NUMBERS.\n");
                     while (getchar() != '\n') {} 
                     divide();
                     break;
 
                 case Mult:
-                    printf("We are in Multiplication.\n");
+                    printf("MULTIPLYING NUMBERS.\n");
                     while (getchar() != '\n') {} 
                     multiply();
                     break;
                 case Comp:
-                    printf("we are in switch, comp\n");
+                    printf("COMPARING NUMBERS\n");
                     while (getchar() != '\n') {} 
                     compare();
                     break;
@@ -75,7 +78,7 @@ int main() {
 
             //while (getchar() != '\n') {}  // Clear the input buffer
         }
-    } while (input != Exit);
+    } while (option != Exit);
 
     return 0;
 }
