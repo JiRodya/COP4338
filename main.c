@@ -26,7 +26,7 @@ int main() {
     do {
         Menu();
 
-        //IF SCANF CANNOT ASSIGN THE VALUE IT WILL 0
+        //ONLY WILL BE 1 IF A SINGLE NUMBER WAS ENTERED
         if (scanf("%d", &input) != 1) {
             printf("Invalid input. Please enter an option from the menu.\n");
             while (getchar() != '\n') {}  // Clear the input buffer
@@ -37,25 +37,30 @@ int main() {
             switch (input) {
                 case Sum:
                     printf("We are in Addition.\n");
+                    while (getchar() != '\n') {} 
                     add();
                     break;
 
                 case Rest:
                     printf("We are in Subtraction.\n");
+                    while (getchar() != '\n') {} 
                     subtract();
                     break;
 
                 case Div:
                     printf("We are in Division.\n");
+                    while (getchar() != '\n') {} 
                     divide();
                     break;
 
                 case Mult:
                     printf("We are in Multiplication.\n");
+                    while (getchar() != '\n') {} 
                     multiply();
                     break;
                 case Comp:
                     printf("we are in switch, comp\n");
+                    while (getchar() != '\n') {} 
                     compare();
                     break;
 
@@ -96,22 +101,22 @@ void add() {
     float sum = input1 + input2;
     printf("%.2f + %.2f = %.2f\n\n", input1, input2, sum);
 
-    //while (getchar() != '\n') {}  // Clear the input buffer
+  
 }
 
 void subtract() {
-    printf("Inside subtract function.\n\n");
-    //while (getchar() != '\n') {}  // Clear the input buffer
+    printf("Inside subtract function.\n");
+    
 }
 
 void divide() {
-    printf("Inside divide function.\n\n");
-   // while (getchar() != '\n') {}  // Clear the input buffer
+    printf("Inside divide function.\n");
+ 
 }
 
 void multiply() {
-    printf("Inside multiply function.\n\n");
-   // while (getchar() != '\n') {}  // Clear the input buffer
+    printf("Inside multiply function.\n");
+   
 }
 
 void compare(){
