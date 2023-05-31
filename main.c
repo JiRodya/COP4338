@@ -84,7 +84,7 @@ void Menu() {
     printf("5. Compare\n");
     printf("6. Exit\n");
     printf("====================================\n");
-    printf("Choose an option: ");
+    printf("Choose an option (1-6. Example= 5): ");
 }
 
 void add() {
