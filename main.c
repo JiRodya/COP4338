@@ -92,33 +92,80 @@ void Menu() {
     printf("Choose an option (1-6. Example= 5): ");
 }
 
+
+//ALL OPERATIONS WILL HAVE PRECISION POINT e^-3 FOR THIS ASSIGNMENT
+
 void add() {
     float input1, input2;
 
-    printf("Enter two numbers: (separated by white spaces or hit enter after each)");
+    printf("Enter two numbers to add: (separated by white spaces or hit enter after each)");
     scanf("%f %f", &input1, &input2);
 
     float sum = input1 + input2;
-    printf("%.2f + %.2f = %.2f\n\n", input1, input2, sum);
+    printf("%.3f + %.3f = %.3f\n\n", input1, input2, sum);
 
   
 }
 
 void subtract() {
     printf("Inside subtract function.\n");
+    float input1, input2;
+
+    printf("Enter two numbers to subtract: (separated by white spaces or hit enter after each)");
+    scanf("%f %f", &input1, &input2);
+
+    float rest = input1 - input2;
+    printf("%.3f - %.3f = %.3f\n\n", input1, input2, rest);
     
 }
 
 void divide() {
-    printf("Inside divide function.\n");
+    float tolerance = 1e-3;
+
+    float divisor, dividend, quotient;
+    printf("Enter numerator and denominator, in that order.\n");
+    printf("You can use white space or enter to separate different inputs\n");
+    printf("Your Input: ");
+    scanf("%f %f", &divisor, &dividend);
+
+    if(dividend - tolerance > 0){
+        //DO THE DIVISION
+        quotient = divisor/dividend;
+        printf("%.3f / %.3f = %.3f\n\n", divisor, dividend, quotient);
+    }
+    else{
+        printf("ERROR. Denominator cannot be zero.\n");
+    }
+    
  
 }
 
 void multiply() {
     printf("Inside multiply function.\n");
+    float input1, input2;
+
+    printf("Enter two numbers to multiply: (separated by white spaces or hit enter after each)");
+    scanf("%f %f", &input1, &input2);
+
+    float prod = input1 * input2;
+    printf("%.3f * %.3f = %.3f\n\n", input1, input2, prod);
    
 }
 
 void compare(){
     printf("we're inside compare()\n");
+    float input1, input2;
+
+    printf("Enter two numbers to compare: (separated by white spaces or hit enter after each)");
+    scanf("%f %f", &input1, &input2);
+
+    if(input1 > input2){
+        printf("%.3f > %.3f \n\n", input1, input2);
+    }
+
+    else{
+        printf("%.3f < %.3f \n\n", input1, input2);
+    
+    }
+    
 }
