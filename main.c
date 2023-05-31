@@ -61,6 +61,7 @@ int main() {
                     while (getchar() != '\n') {} 
                     multiply();
                     break;
+
                 case Comp:
                     printf("COMPARING NUMBERS\n");
                     while (getchar() != '\n') {} 
@@ -130,12 +131,12 @@ void divide() {
     printf("Enter numerator and denominator, in that order.\n");
     printf("You can use white space or enter to separate different inputs\n");
     printf("Your Input: ");
-    scanf("%f %f", &divisor, &dividend);
+    scanf("%f %f", &dividend, &divisor);
 
-    if(dividend - tolerance > 0){
+    if(divisor - tolerance > 0){
         //DO THE DIVISION
-        quotient = divisor/dividend;
-        printf("%.3f / %.3f = %.3f\n\n", divisor, dividend, quotient);
+        quotient = dividend/divisor;
+        printf("%.3f / %.3f = %.3f\n\n", dividend, divisor, quotient);
     }
     else{
         printf("ERROR. Denominator cannot be zero.\n");
