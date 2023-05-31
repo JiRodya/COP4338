@@ -105,9 +105,10 @@ void add() {
     scanf("%f %f", &input1, &input2);
 
     float sum = input1 + input2;
-    printf("%.3f + %.3f = %.3f\n\n", input1, input2, sum);
 
-  
+    //first set's the format and then pass the variables (if needed)
+    printf("%.3f + %.3f = %.3f\n\n", input1, input2, sum);  
+    //%.3f floating with 3 decimal places
 }
 
 void subtract() {
