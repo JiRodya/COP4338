@@ -21,15 +21,19 @@ int main() {
     int input;
 
     printf("This is a calculator capable of performing the following operations:\n");
-    printf("Addition, Subtraction, Division, and Multiplication.\n");
+    printf("Addition, Subtraction, Division, Multiplication, Comparison.\n");
 
     do {
         Menu();
 
+        //IF SCANF CANNOT ASSIGN THE VALUE IT WILL 0
         if (scanf("%d", &input) != 1) {
             printf("Invalid input. Please enter an option from the menu.\n");
             while (getchar() != '\n') {}  // Clear the input buffer
-        } else {
+        }
+
+        //ONCE HERE ONLY NUMBERS WHERE ENTERED
+        else {
             switch (input) {
                 case Sum:
                     printf("We are in Addition.\n");
@@ -51,7 +55,7 @@ int main() {
                     multiply();
                     break;
                 case Comp:
-                    printf("we are in switch, comp\n"); 
+                    printf("we are in switch, comp\n");
                     compare();
                     break;
 
@@ -64,7 +68,7 @@ int main() {
                     break;
             }
 
-            while (getchar() != '\n') {}  // Clear the input buffer
+            //while (getchar() != '\n') {}  // Clear the input buffer
         }
     } while (input != Exit);
 
