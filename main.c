@@ -51,7 +51,9 @@ int main() {
                     multiply();
                     break;
                 case Comp:
-                    printf("we are in switch, comp\n");
+                    printf("we are in switch, comp\n"); 
+                    compare();
+                    break;
 
                 case Exit:
                     printf("Exiting...\n");
@@ -84,7 +86,7 @@ void Menu() {
 void add() {
     float input1, input2;
 
-    printf("Enter two numbers: ");
+    printf("Enter two numbers: (separated by white spaces or hit enter after each)");
     scanf("%f %f", &input1, &input2);
 
     float sum = input1 + input2;
@@ -109,5 +111,5 @@ void multiply() {
 }
 
 void compare(){
-    printf("we're inside compare()");
+    printf("we're inside compare()\n");
 }
