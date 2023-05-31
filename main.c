@@ -61,6 +61,7 @@ int main() {
                     while (getchar() != '\n') {} 
                     multiply();
                     break;
+                    
                 case Comp:
                     printf("COMPARING NUMBERS\n");
                     while (getchar() != '\n') {} 
