@@ -1,0 +1,72 @@
+Develop a program build a calculator that should perform below listed operation. The program should work until Exit is selected.
+
+Should read two numbers and do the following calculator operation
+
+The menu should like below
+
+=======================================
+
+Addition
+Subtraction
+Multiplication
+Division
+Comparison
+Exit
+=======================================
+
+
+
+//for the idea of reading expressions:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char input[100];
+    printf("Enter an expression: ");
+    fgets(input, sizeof(input), stdin);  // Read the input string
+
+    int num1, num2;
+    char op;
+
+    // Use sscanf to extract the numbers and operation
+    if (sscanf(input, "%d %c %d", &num1, &op, &num2) == 3) {
+        // Numbers and operation extracted successfully
+        printf("First number: %d\n", num1);
+        printf("Operation: %c\n", op);
+        printf("Second number: %d\n", num2);
+
+        int result;
+        switch (op) {
+            case '+':
+                result = num1 + num2;
+                printf("Result: %d\n", result);
+                break;
+            case '-':
+                result = num1 - num2;
+                printf("Result: %d\n", result);
+                break;
+            case '*':
+                result = num1 * num2;
+                printf("Result: %d\n", result);
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    printf("Result: %d\n", result);
+                } else {
+                    printf("Division by zero is not allowed!\n");
+                }
+                break;
+            default:
+                printf("Invalid operation!\n");
+                break;
+        }
+    } else {
+        // Invalid input format
+        printf("Invalid input format!\n");
+    }
+
+    return 0;
+}
